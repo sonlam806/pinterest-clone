@@ -5,12 +5,60 @@
   &-fluid {
     margin: 0;
     max-width: 100%;
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    @for $i from 1 through $grid__cols {
+      .col-#{$i} {
+        flex-basis: (100 / ($grid__cols / $i)) * 1%;
+      }
+    }
+
+    @for $i from 1 through $grid__cols {
+      .col-sm-#{$i} {
+        flex-basis: (100 / ($grid__cols / $i)) * 1%;
+      }
+    }
+
+    @media screen and (min-width: $grid__bp-md * 1px) {
+      @for $i from 1 through $grid__cols {
+        .col-md-#{$i} {
+          flex-basis: (100 / ($grid__cols / $i)) * 1%;
+        }
+      }
+    }
+
+    @media screen and (min-width: $grid__bp-lg * 1px) {
+      @for $i from 1 through $grid__cols {
+        .col-lg-#{$i} {
+          flex-basis: (100 / ($grid__cols / $i)) * 1%;
+        }
+      }
+    }
+
+    @media screen and (min-width: $grid__bp-xl * 1px) {
+      @for $i from 1 through $grid__cols {
+        .col-xl-#{$i} {
+          flex-basis: (100 / ($grid__cols / $i)) * 1%;
+        }
+      }
+    }
   }
 
   .row {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+  }
+
+  @for $i from 1 through $grid__cols {
+    .col-#{$i} {
+      flex-basis: (100 / ($grid__cols / $i)) * 1%;
+    }
   }
 
   @for $i from 1 through $grid__cols {
