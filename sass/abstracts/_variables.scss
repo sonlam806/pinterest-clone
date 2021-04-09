@@ -1,0 +1,14 @@
+// Width, Height, Size
+$max-width: 114rem;
+
+$gutter-vertical: 8rem; // margin bottom giữa các row
+$gutter-horizontal: 6rem; // giá trị khoảng cách giữa các column
+
+// Break Points
+$grid__bp-sm: 576;
+$grid__bp-md: 768;
+$grid__bp-lg: 992;
+$grid__bp-xl: 1200;
+
+// Grid columns
+$grid__cols: 12;
