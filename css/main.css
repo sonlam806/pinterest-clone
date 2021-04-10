@@ -365,28 +365,33 @@ body {
   .hero .hero-banner {
     position: relative; }
     .hero .hero-banner .hero-static-text {
+      width: 100%;
       font-size: 60px;
       font-weight: bold;
       position: absolute;
       top: 20px;
       left: 50%;
       transform: translate(-50%, 0%); }
-    .hero .hero-banner .hero-dynamic-text {
-      position: absolute;
-      top: 100px;
-      left: 50%;
-      transform: translate(-50%, 0%); }
-      .hero .hero-banner .hero-dynamic-text .use-case {
-        font-size: 50px;
-        font-weight: bold; }
-        .hero .hero-banner .hero-dynamic-text .use-case.food {
-          color: #c28b00; }
-        .hero .hero-banner .hero-dynamic-text .use-case.home {
-          color: #618c7b; }
-        .hero .hero-banner .hero-dynamic-text .use-case.fashion {
-          color: #0076d3; }
-        .hero .hero-banner .hero-dynamic-text .use-case.gardening {
-          color: #407a57; }
+    .hero .hero-banner .hero-dynamic-text .use-case {
+      width: 100%;
+      display: none;
+      font-size: 50px;
+      font-weight: bold; }
+      .hero .hero-banner .hero-dynamic-text .use-case.food {
+        color: #c28b00; }
+      .hero .hero-banner .hero-dynamic-text .use-case.home {
+        color: #618c7b; }
+      .hero .hero-banner .hero-dynamic-text .use-case.fashion {
+        color: #0076d3; }
+      .hero .hero-banner .hero-dynamic-text .use-case.gardening {
+        color: #407a57; }
+      .hero .hero-banner .hero-dynamic-text .use-case.active {
+        display: block;
+        position: absolute;
+        top: 120px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        animation: scrollingUp 6s; }
     .hero .hero-banner .indicator {
       position: absolute;
       top: 200px;
@@ -411,3 +416,20 @@ body {
               background-color: #0076d3; }
             .hero .hero-banner .indicator ul li .indicator-dot.gardening-dot.active {
               background-color: #407a57; }
+
+@keyframes scrollingUp {
+  0% {
+    top: 140px;
+    opacity: 0.5; }
+  25% {
+    top: 100px;
+    opacity: 1; }
+  50% {
+    top: 100px;
+    opacity: 1; }
+  75% {
+    top: 100px;
+    opacity: 1; }
+  100% {
+    top: 60px;
+    opacity: 0; } }

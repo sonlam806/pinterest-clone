@@ -12,6 +12,7 @@
     position: relative;
 
     .hero-static-text {
+      width: 100%;
       font-size: 60px;
       font-weight: bold;
       position: absolute;
@@ -20,11 +21,9 @@
       transform: translate(-50%, 0%);
     }
     .hero-dynamic-text {
-      position: absolute;
-      top: 100px;
-      left: 50%;
-      transform: translate(-50%, 0%);
       .use-case {
+        width: 100%;
+        display: none;
         font-size: 50px;
         font-weight: bold;
         &.food {
@@ -38,6 +37,15 @@
         }
         &.gardening {
           color: $green;
+        }
+
+        &.active {
+          display: block;
+          position: absolute;
+          top: 120px;
+          left: 50%;
+          transform: translate(-50%, 0%);
+          animation: scrollingUp 6s;
         }
       }
     }
@@ -73,5 +81,32 @@
         }
       }
     }
+  }
+}
+
+@keyframes scrollingUp {
+  0% {
+    top: 140px;
+    opacity: 0.5;
+  }
+
+  25% {
+    top: 100px;
+    opacity: 1;
+  }
+
+  50% {
+    top: 100px;
+    opacity: 1;
+  }
+
+  75% {
+    top: 100px;
+    opacity: 1;
+  }
+
+  100% {
+    top: 60px;
+    opacity: 0;
   }
 }
