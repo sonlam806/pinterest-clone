@@ -3,24 +3,26 @@ let dots = document.querySelectorAll('.indicator-dot');
 let activeIndex = 0;
 let useCaseTextInterval, dotsInterval;
 
-function initSlider() {
+function initSlider(duration, delayTime) {
+  dotsInterval = setInterval(() => {
+    activeIndex++;
+    dots.forEach((text) => text.classList.remove('active'));
+
+    if (activeIndex === 4) {
+      activeIndex = 0;
+    }
+
+    dots[activeIndex].classList.add('active');
+  }, 5800);
+
   useCaseTextInterval = setInterval(() => {
     useCaseTexts.forEach((text) => text.classList.remove('active'));
 
-    useCaseTexts[activeIndex + 1].classList.add('active');
-    activeIndex++;
-    if (activeIndex === 3) {
-      activeIndex = 0;
-    }
+    useCaseTexts[activeIndex].classList.add('active');
   }, 6000);
-
-  dotsInterval = setInterval(() => {
-    dots.forEach((text) => text.classList.remove('active'));
-    dots[activeIndex + 1].classList.add('active');
-  }, 5500);
 }
 
-initSlider();
+initSlider(6000, 300);
 
 for (let index = 0; index < dots.length; index++) {
   const element = dots[index];
@@ -36,11 +38,13 @@ function handleActiveSlide(selectedIndex) {
 
   setTimeout(() => {
     useCaseTexts[selectedIndex].classList.add('active');
-  }, 500);
+  }, 300);
   dots[selectedIndex].classList.add('active');
 
+  // clear old interval
   clearInterval(useCaseTextInterval);
   clearInterval(dotsInterval);
 
-  initSlider();
+  // re-initialize interval
+  initSlider(6000, 300);
 }
