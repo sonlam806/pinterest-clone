@@ -388,7 +388,6 @@ body {
       .hero .hero-banner .hero-dynamic-text .use-case.active {
         display: block;
         position: absolute;
-        top: 120px;
         left: 50%;
         transform: translate(-50%, 0%);
         animation: scrollingUp 6s; }
@@ -407,7 +406,8 @@ body {
             width: 10px;
             height: 10px;
             border-radius: 50%;
-            background-color: #e1e1e1; }
+            background-color: #e1e1e1;
+            cursor: pointer; }
             .hero .hero-banner .indicator ul li .indicator-dot.foot-dot.active {
               background-color: #c28b00; }
             .hero .hero-banner .indicator ul li .indicator-dot.home-dot.active {

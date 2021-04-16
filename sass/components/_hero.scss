@@ -42,7 +42,6 @@
         &.active {
           display: block;
           position: absolute;
-          top: 120px;
           left: 50%;
           transform: translate(-50%, 0%);
           animation: scrollingUp 6s;
@@ -65,6 +64,7 @@
             height: 10px;
             border-radius: 50%;
             background-color: $grey;
+            cursor: pointer;
             &.foot-dot.active {
               background-color: $yellow;
             }
