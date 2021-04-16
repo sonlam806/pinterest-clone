@@ -10,7 +10,8 @@ html {
   font-size: 16px; }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow-x: hidden; }
 
 ul {
   list-style: none; }
@@ -416,6 +417,53 @@ body {
               background-color: #0076d3; }
             .hero .hero-banner .indicator ul li .indicator-dot.gardening-dot.active {
               background-color: #407a57; }
+
+.gallery-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; }
+
+.gallery {
+  display: flex;
+  width: 1750px;
+  position: absolute;
+  top: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  left: auto;
+  right: auto; }
+  .gallery .image-column {
+    display: block;
+    width: 25%;
+    height: 100vh;
+    margin: 0px 10px; }
+    .gallery .image-column[role='first-col'] {
+      margin-top: 0px; }
+    .gallery .image-column[role='second-col'], .gallery .image-column[role='sixth-col'] {
+      margin-top: 120px; }
+    .gallery .image-column[role='third-col'], .gallery .image-column[role='fifth-col'] {
+      margin-top: 180px; }
+    .gallery .image-column[role='fourth-col'] {
+      margin-top: 240px; }
+    .gallery .image-column div .image-card {
+      margin-bottom: 1rem; }
+      .gallery .image-column div .image-card div {
+        width: 236px;
+        height: 350px;
+        border-radius: 6%; }
+        .gallery .image-column div .image-card div .image {
+          background-image: url("https://i.pinimg.com/550x/a7/87/20/a78720c39a39ac50a2856420d636d113.jpg");
+          background-size: cover;
+          background-position: 50%;
+          background-repeat: no-repeat;
+          height: 100%;
+          width: 100%;
+          position: relative; }
 
 @keyframes scrollingUp {
   0% {
