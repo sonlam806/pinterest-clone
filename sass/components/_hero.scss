@@ -85,14 +85,15 @@
 }
 
 .gallery-wrapper {
+  position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  position: absolute;
   height: 100%;
   width: 100%;
   overflow: hidden;
+  z-index: -2;
   .gallery {
     display: flex;
     width: 1750px;
@@ -108,6 +109,7 @@
       width: 25%;
       height: 100vh;
       margin: 0px 10px;
+
       &[role='first-col'] {
         margin-top: 0px;
       }
@@ -121,6 +123,35 @@
       }
       &[role='fourth-col'] {
         margin-top: 240px;
+      }
+
+      // Animation
+      &[role='first-col'] {
+        animation: slideUp 6s;
+      }
+      &[role='second-col'] {
+        animation: slideUp 6s;
+        animation-delay: 0.2s;
+      }
+      &[role='third-col'] {
+        animation: slideUp 6s;
+        animation-delay: 0.6s;
+      }
+      &[role='fourth-col'] {
+        animation: slideUp 6s;
+        animation-delay: 1s;
+      }
+      &[role='fifth-col'] {
+        animation: slideUp 6s;
+        animation-delay: 1.4s;
+      }
+      &[role='sixth-col'] {
+        animation: slideUp 6s;
+        animation-delay: 1.8s;
+      }
+      &[role='seventh-col'] {
+        animation: slideUp 6s;
+        animation-delay: 2.2s;
       }
       div {
         .image-card {
@@ -180,6 +211,31 @@
 
   100% {
     top: 60px;
+    opacity: 0;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  25% {
+    transform: translateY(0px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-80px);
     opacity: 0;
   }
 }
