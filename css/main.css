@@ -499,6 +499,19 @@ body {
     width: 100%;
     background-image: linear-gradient(rgba(255, 255, 255, 0), white); }
 
+.scroll-down {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #c28b00;
+  animation: bounce 2s infinite; }
+  .scroll-down .arrow-icon {
+    fill: white; }
+
 @keyframes scrollingUp {
   0% {
     top: 140px;
@@ -532,3 +545,11 @@ body {
   100% {
     transform: translateY(-100px);
     opacity: 0; } }
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px); }
+  50% {
+    transform: translateY(-20px); }
+  100% {
+    transform: translateY(0px); } }
