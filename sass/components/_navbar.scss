@@ -2,11 +2,12 @@
   height: 80px;
   justify-content: center;
   align-items: center;
+  padding: 0rem 1rem;
 
   font-size: 1.3rem;
   .navbar-brand {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     svg {
       fill: $red;
@@ -21,6 +22,8 @@
 
   .navbar-links {
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
     ul {
       display: flex;
       justify-content: center;
