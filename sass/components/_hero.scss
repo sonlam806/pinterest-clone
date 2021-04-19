@@ -67,6 +67,7 @@
             border-radius: 50%;
             background-color: $grey;
             cursor: pointer;
+            transition: all 300ms ease-in;
             &.food-dot.active {
               background-color: $yellow;
             }
