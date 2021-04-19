@@ -41,15 +41,18 @@ function handleActiveSlide(selectedIndex) {
   activeIndex = selectedIndex;
   useCaseTexts.forEach((text) => text.classList.remove('active'));
   dots.forEach((text) => text.classList.remove('active'));
+  galleries.forEach((gallery) => gallery.classList.remove('active'));
 
   setTimeout(() => {
     useCaseTexts[selectedIndex].classList.add('active');
   }, 300);
   dots[selectedIndex].classList.add('active');
+  galleries[selectedIndex].classList.add('active');
 
   // clear old interval
   clearInterval(useCaseTextInterval);
   clearInterval(dotsInterval);
+  clearInterval(galleriesInterval);
 
   // re-initialize interval
   initSlider(6000, 300);
