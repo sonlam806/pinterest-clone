@@ -1,7 +1,8 @@
 let useCaseTexts = document.querySelectorAll('.use-case');
 let dots = document.querySelectorAll('.indicator-dot');
+let galleries = document.querySelectorAll('.gallery');
 let activeIndex = 0;
-let useCaseTextInterval, dotsInterval;
+let useCaseTextInterval, dotsInterval, galleriesInterval;
 
 function initSlider(duration, delayTime) {
   dotsInterval = setInterval(() => {
@@ -13,13 +14,18 @@ function initSlider(duration, delayTime) {
     }
 
     dots[activeIndex].classList.add('active');
-  }, 5800);
+  }, 7500);
 
   useCaseTextInterval = setInterval(() => {
     useCaseTexts.forEach((text) => text.classList.remove('active'));
 
     useCaseTexts[activeIndex].classList.add('active');
-  }, 6000);
+  }, 7500);
+
+  galleriesInterval = setInterval(() => {
+    galleries.forEach((gallery) => gallery.classList.remove('active'));
+    galleries[activeIndex].classList.add('active');
+  }, 7500);
 }
 
 initSlider(6000, 300);
