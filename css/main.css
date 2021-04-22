@@ -11,7 +11,8 @@ html {
   scroll-behavior: smooth; }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow-x: hidden; }
 
 ul {
   list-style: none; }
@@ -325,9 +326,10 @@ body {
           .navbar .navbar-links ul li a:hover {
             color: #e60023;
             text-decoration: underline; }
+    .navbar .navbar-links .button-group .btn {
+      margin: 0px 8px; }
 
 .btn {
-  margin: 0px 8px;
   padding: 16px 18px;
   border-radius: 24px;
   outline: none;
@@ -355,11 +357,12 @@ body {
     transition: all 300ms ease-in-out; }
     .btn.btn-default:hover {
       background-color: #e2e2e2; }
+  .btn.btn-full-width {
+    width: 100%; }
 
 .hero-section {
   width: 100%;
-  display: block;
-  position: relative; }
+  display: none; }
 
 .hero {
   text-align: center;
@@ -425,9 +428,7 @@ body {
               background-color: #407a57; }
 
 .gallery-wrapper {
-  position: relative;
-  top: 0px;
-  left: 0px;
+  position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -563,3 +564,54 @@ body {
     transform: translateY(-20px); }
   100% {
     transform: translateY(0px); } }
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  padding-top: 4rem; }
+  .login .login-left {
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+    .login .login-left h3 {
+      font-size: 3rem;
+      color: #ffffff; }
+  .login .login-form {
+    max-width: 395px;
+    min-height: 400px;
+    padding: 20px 10px 24px;
+    border-radius: 32px;
+    background-color: #ffffff;
+    text-align: center; }
+    .login .login-form .login-logo {
+      margin-bottom: 8px; }
+    .login .login-form .login-header {
+      margin-bottom: 1rem; }
+      .login .login-form .login-header h4 {
+        color: #333333;
+        font-size: 36px;
+        font-weight: 600;
+        -webkit-font-smoothing: antialiased;
+        letter-spacing: -1.2px;
+        word-break: break-word;
+        line-height: 1; }
+      .login .login-form .login-header span {
+        font-size: 1rem;
+        color: #333333;
+        font-size: 16px;
+        font-weight: normal; }
+    .login .login-form .login-body input {
+      outline: none;
+      border: 1px solid #dddddd;
+      min-height: 48px;
+      border-radius: 16px;
+      width: 60%;
+      margin: 4px 0px;
+      padding: 8px 10px;
+      transition: all 200ms ease-in-out; }
+      .login .login-form .login-body input:focus {
+        border: 1px solid dodgerblue; }
+    .login .login-form .login-actions .button-group {
+      width: 60%;
+      margin: 0px auto; }

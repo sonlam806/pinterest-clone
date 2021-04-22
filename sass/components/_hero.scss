@@ -1,7 +1,6 @@
 .hero-section {
   width: 100%;
-  display: block;
-  position: relative;
+  display: none;
 }
 
 .hero {
@@ -90,9 +89,7 @@
 }
 
 .gallery-wrapper {
-  position: relative;
-  top: 0px;
-  left: 0px;
+  position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: center;
