@@ -38,4 +38,14 @@
   &.btn-full-width {
     width: 100%;
   }
+
+  // Variants color
+  &[role='blue-bg'] {
+    background-color: #1877f2;
+  }
+  &[role='no-bg'] {
+    background-color: transparent;
+    color: #000000;
+    border: 1px solid #dddddd;
+  }
 }
