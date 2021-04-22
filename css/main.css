@@ -7,11 +7,11 @@
   box-sizing: inherit; }
 
 html {
-  font-size: 16px; }
+  font-size: 16px;
+  scroll-behavior: smooth; }
 
 body {
-  box-sizing: border-box;
-  overflow-x: hidden; }
+  box-sizing: border-box; }
 
 ul {
   list-style: none; }
@@ -357,7 +357,9 @@ body {
       background-color: #e2e2e2; }
 
 .hero-section {
-  width: 100%; }
+  width: 100%;
+  display: block;
+  position: relative; }
 
 .hero {
   text-align: center;
@@ -423,7 +425,9 @@ body {
               background-color: #407a57; }
 
 .gallery-wrapper {
-  position: absolute;
+  position: relative;
+  top: 0px;
+  left: 0px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -456,24 +460,24 @@ body {
       .gallery-wrapper .gallery .image-column[role='fourth-col'] {
         margin-top: 240px; }
       .gallery-wrapper .gallery .image-column[role='first-col'] {
-        animation: slideUp 6s; }
+        animation: slideUp 7s; }
       .gallery-wrapper .gallery .image-column[role='second-col'] {
-        animation: slideUp 6s;
+        animation: slideUp 7s;
         animation-delay: 0.2s; }
       .gallery-wrapper .gallery .image-column[role='third-col'] {
-        animation: slideUp 6s;
+        animation: slideUp 7s;
         animation-delay: 0.5s; }
       .gallery-wrapper .gallery .image-column[role='fourth-col'] {
-        animation: slideUp 6s;
+        animation: slideUp 7s;
         animation-delay: 1s; }
       .gallery-wrapper .gallery .image-column[role='fifth-col'] {
-        animation: slideUp 6s;
+        animation: slideUp 7s;
         animation-delay: 1.4s; }
       .gallery-wrapper .gallery .image-column[role='sixth-col'] {
-        animation: slideUp 6s;
+        animation: slideUp 7s;
         animation-delay: 1.8s; }
       .gallery-wrapper .gallery .image-column[role='seventh-col'] {
-        animation: slideUp 6s;
+        animation: slideUp 7s;
         animation-delay: 2.2s; }
       .gallery-wrapper .gallery .image-column div .image-card {
         margin-bottom: 1rem; }
@@ -507,7 +511,10 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #c28b00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms ease-in;
   animation: bounce 2s infinite; }
   .scroll-down .arrow-icon {
     fill: white; }
@@ -533,13 +540,16 @@ body {
   0% {
     transform: translateY(100px);
     opacity: 0; }
-  25% {
+  20% {
     transform: translateY(0px);
     opacity: 0.5; }
-  50% {
+  40% {
     transform: translateY(0px);
     opacity: 1; }
-  75% {
+  60% {
+    transform: translateY(0px);
+    opacity: 1; }
+  80% {
     transform: translateY(0px);
     opacity: 1; }
   100% {

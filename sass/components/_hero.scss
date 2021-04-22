@@ -1,5 +1,7 @@
 .hero-section {
   width: 100%;
+  display: block;
+  position: relative;
 }
 
 .hero {
@@ -88,7 +90,9 @@
 }
 
 .gallery-wrapper {
-  position: absolute;
+  position: relative;
+  top: 0px;
+  left: 0px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -131,30 +135,30 @@
 
       // Animation
       &[role='first-col'] {
-        animation: slideUp 6s;
+        animation: slideUp 7s;
       }
       &[role='second-col'] {
-        animation: slideUp 6s;
+        animation: slideUp 7s;
         animation-delay: 0.2s;
       }
       &[role='third-col'] {
-        animation: slideUp 6s;
+        animation: slideUp 7s;
         animation-delay: 0.5s;
       }
       &[role='fourth-col'] {
-        animation: slideUp 6s;
+        animation: slideUp 7s;
         animation-delay: 1s;
       }
       &[role='fifth-col'] {
-        animation: slideUp 6s;
+        animation: slideUp 7s;
         animation-delay: 1.4s;
       }
       &[role='sixth-col'] {
-        animation: slideUp 6s;
+        animation: slideUp 7s;
         animation-delay: 1.8s;
       }
       &[role='seventh-col'] {
-        animation: slideUp 6s;
+        animation: slideUp 7s;
         animation-delay: 2.2s;
       }
       div {
@@ -205,7 +209,11 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: $yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 300ms ease-in;
 
   .arrow-icon {
     fill: white;
@@ -246,20 +254,22 @@
     transform: translateY(100px);
     opacity: 0;
   }
-
-  25% {
+  20% {
     transform: translateY(0px);
     opacity: 0.5;
   }
-  50% {
+  40% {
     transform: translateY(0px);
     opacity: 1;
   }
-  75% {
+  60% {
     transform: translateY(0px);
     opacity: 1;
   }
-
+  80% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
   100% {
     transform: translateY(-100px);
     opacity: 0;
