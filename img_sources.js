@@ -1,4 +1,4 @@
-export const images = {
+const images = {
   food: [
     'https://i.pinimg.com/236x/e3/41/4b/e3414b2fcf00375a199ba6964be551af.jpg',
     'https://i.pinimg.com/236x/78/6e/00/786e00eab219eca59803d118fbe0feb3.jpg',

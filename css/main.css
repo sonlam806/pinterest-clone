@@ -12,7 +12,7 @@ html {
 
 body {
   box-sizing: border-box;
-  overflow-x: hidden; }
+  overflow: hidden; }
 
 ul {
   list-style: none; }
@@ -368,73 +368,72 @@ body {
 
 .hero-section {
   width: 100%;
-  display: none; }
+  height: 100vh;
+  display: block;
+  position: relative; }
 
 .hero {
   text-align: center;
   width: 80%;
   height: 100%;
   margin: 0px auto; }
-  .hero .hero-banner {
-    position: relative; }
-    .hero .hero-banner .hero-static-text {
-      width: 100%;
-      font-size: 60px;
-      font-weight: bold;
+  .hero .hero-banner .hero-static-text {
+    width: 100%;
+    font-size: 60px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0%); }
+  .hero .hero-banner .hero-dynamic-text .use-case {
+    width: 100%;
+    display: none;
+    font-size: 50px;
+    font-weight: bold;
+    opacity: 0; }
+    .hero .hero-banner .hero-dynamic-text .use-case.food {
+      color: #c28b00; }
+    .hero .hero-banner .hero-dynamic-text .use-case.home {
+      color: #618c7b; }
+    .hero .hero-banner .hero-dynamic-text .use-case.fashion {
+      color: #0076d3; }
+    .hero .hero-banner .hero-dynamic-text .use-case.gardening {
+      color: #407a57; }
+    .hero .hero-banner .hero-dynamic-text .use-case.active {
+      display: block;
       position: absolute;
-      top: 20px;
       left: 50%;
-      transform: translate(-50%, 0%); }
-    .hero .hero-banner .hero-dynamic-text .use-case {
-      width: 100%;
-      display: none;
-      font-size: 50px;
-      font-weight: bold;
-      opacity: 0; }
-      .hero .hero-banner .hero-dynamic-text .use-case.food {
-        color: #c28b00; }
-      .hero .hero-banner .hero-dynamic-text .use-case.home {
-        color: #618c7b; }
-      .hero .hero-banner .hero-dynamic-text .use-case.fashion {
-        color: #0076d3; }
-      .hero .hero-banner .hero-dynamic-text .use-case.gardening {
-        color: #407a57; }
-      .hero .hero-banner .hero-dynamic-text .use-case.active {
-        display: block;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 0%);
-        animation: scrollingUp 7.5s; }
-    .hero .hero-banner .indicator {
-      position: absolute;
-      top: 200px;
-      left: 50%;
-      transform: translate(-50%, 0);
-      z-index: 2000; }
-      .hero .hero-banner .indicator ul {
-        display: flex;
-        justify-content: center;
-        align-items: center; }
-        .hero .hero-banner .indicator ul li {
-          margin: 0px 4px; }
-          .hero .hero-banner .indicator ul li .indicator-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: #e1e1e1;
-            cursor: pointer;
-            transition: all 300ms ease-in; }
-            .hero .hero-banner .indicator ul li .indicator-dot.food-dot.active {
-              background-color: #c28b00; }
-            .hero .hero-banner .indicator ul li .indicator-dot.home-dot.active {
-              background-color: #618c7b; }
-            .hero .hero-banner .indicator ul li .indicator-dot.fashion-dot.active {
-              background-color: #0076d3; }
-            .hero .hero-banner .indicator ul li .indicator-dot.gardening-dot.active {
-              background-color: #407a57; }
+      transform: translate(-50%, 0%);
+      animation: scrollingUp 7.5s; }
+  .hero .hero-banner .indicator {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 2000; }
+    .hero .hero-banner .indicator ul {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .hero .hero-banner .indicator ul li {
+        margin: 0px 4px; }
+        .hero .hero-banner .indicator ul li .indicator-dot {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: #e1e1e1;
+          cursor: pointer;
+          transition: all 300ms ease-in; }
+          .hero .hero-banner .indicator ul li .indicator-dot.food-dot.active {
+            background-color: #c28b00; }
+          .hero .hero-banner .indicator ul li .indicator-dot.home-dot.active {
+            background-color: #618c7b; }
+          .hero .hero-banner .indicator ul li .indicator-dot.fashion-dot.active {
+            background-color: #0076d3; }
+          .hero .hero-banner .indicator ul li .indicator-dot.gardening-dot.active {
+            background-color: #407a57; }
 
 .gallery-wrapper {
-  position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -447,7 +446,7 @@ body {
     display: flex;
     width: 1750px;
     position: absolute;
-    top: 20%;
+    top: 200px;
     margin-left: auto;
     margin-right: auto;
     left: auto;
@@ -522,6 +521,7 @@ body {
   justify-content: center;
   align-items: center;
   transition: all 300ms ease-in;
+  z-index: 1000;
   animation: bounce 2s infinite; }
   .scroll-down .arrow-icon {
     fill: white; }
@@ -574,8 +574,15 @@ body {
 .login {
   width: 100vw;
   height: 100vh;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
   background: rgba(0, 0, 0, 0.6);
-  padding-top: 4rem; }
+  padding-top: 8rem;
+  animation: fadeIn 3s; }
+  .login.active {
+    display: block; }
   .login .login-left {
     justify-content: center;
     align-items: center;
@@ -662,3 +669,9 @@ body {
         cursor: pointer;
         background-color: #efefef;
         font-weight: bold; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }

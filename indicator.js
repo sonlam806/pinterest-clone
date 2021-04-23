@@ -10,38 +10,42 @@ let dots = document.querySelectorAll('.indicator-dot');
 let galleries = document.querySelectorAll('.gallery');
 let scrolldownBtn = document.querySelector('.scroll-down');
 
-let activeIndex = 0;
-let useCaseTextInterval, dotsInterval, galleriesInterval, scrolldownBtnInterval;
+let activeIndex = 1;
+var sliderInterval;
 
-function initSlider(duration, delayTime) {
-  dotsInterval = setInterval(() => {
-    activeIndex++;
+function initSlider() {
+  console.log('init slider');
+  activeIndex = 1;
+
+  // render first time
+  dots.forEach((text) => text.classList.remove('active'));
+  useCaseTexts.forEach((text) => text.classList.remove('active'));
+  galleries.forEach((gallery) => gallery.classList.remove('active'));
+  dots[0].classList.add('active');
+  useCaseTexts[0].classList.add('active');
+  galleries[0].classList.add('active');
+  scrolldownBtn.style.backgroundColor = useCases[0].color;
+
+  // change active status after every 8s
+  sliderInterval = setInterval(() => {
+    console.log('activeIndex', activeIndex);
     dots.forEach((text) => text.classList.remove('active'));
+    useCaseTexts.forEach((text) => text.classList.remove('active'));
+    galleries.forEach((gallery) => gallery.classList.remove('active'));
 
-    if (activeIndex === 4) {
+    if (activeIndex > 3) {
       activeIndex = 0;
     }
 
     dots[activeIndex].classList.add('active');
-  }, 8000);
-
-  useCaseTextInterval = setInterval(() => {
-    useCaseTexts.forEach((text) => text.classList.remove('active'));
-
     useCaseTexts[activeIndex].classList.add('active');
-  }, 8000);
-
-  galleriesInterval = setInterval(() => {
-    galleries.forEach((gallery) => gallery.classList.remove('active'));
     galleries[activeIndex].classList.add('active');
-  }, 8000);
-
-  scrolldownBtnInterval = setInterval(() => {
     scrolldownBtn.style.backgroundColor = useCases[activeIndex].color;
+    activeIndex++;
   }, 8000);
 }
 
-initSlider(6000, 300);
+initSlider();
 
 for (let index = 0; index < dots.length; index++) {
   const element = dots[index];
@@ -63,11 +67,8 @@ function handleActiveSlide(selectedIndex) {
   galleries[selectedIndex].classList.add('active');
 
   // clear old interval
-  clearInterval(useCaseTextInterval);
-  clearInterval(dotsInterval);
-  clearInterval(galleriesInterval);
-  clearInterval(scrolldownBtnInterval);
+  clearInterval(sliderInterval);
 
-  // re-initialize interval
-  initSlider(6000, 300);
+  // re-initialize slider
+  initSlider();
 }

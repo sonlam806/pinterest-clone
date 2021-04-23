@@ -1,6 +1,8 @@
 .hero-section {
   width: 100%;
-  display: none;
+  height: 100vh;
+  display: block;
+  position: relative;
 }
 
 .hero {
@@ -10,7 +12,7 @@
   margin: 0px auto;
 
   .hero-banner {
-    position: relative;
+    // position: relative;
 
     .hero-static-text {
       width: 100%;
@@ -89,7 +91,6 @@
 }
 
 .gallery-wrapper {
-  position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -102,7 +103,7 @@
     display: flex;
     width: 1750px;
     position: absolute;
-    top: 20%;
+    top: 200px;
     margin-left: auto;
     margin-right: auto;
     left: auto;
@@ -211,7 +212,7 @@
   align-items: center;
 
   transition: all 300ms ease-in;
-
+  z-index: 1000;
   .arrow-icon {
     fill: white;
   }
