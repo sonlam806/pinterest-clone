@@ -5,6 +5,7 @@ const overlay = document.querySelector('.overlay');
 body.addEventListener('wheel', function (event) {
   // scroll down
   if (event.deltaY > 0) {
+    clearInterval(sliderInterval);
     setTimeout(() => {
       window.scroll({
         top: 1000,
@@ -14,10 +15,15 @@ body.addEventListener('wheel', function (event) {
 
       login.classList.add('active');
       overlay.style.display = 'none';
+      // render current activeIndex
+      dots.forEach((text) => text.classList.remove('active'));
+      useCaseTexts.forEach((text) => text.classList.remove('active'));
+      galleries.forEach((gallery) => gallery.classList.remove('active'));
 
-      clearInterval(useCaseTextInterval);
-      clearInterval(dotsInterval);
-      clearInterval(galleriesInterval);
+      galleries[activeIndex].classList.add('active');
+      galleries[activeIndex].style.animation = 'none';
+      galleries[activeIndex].style.opacity = '1';
+      scrolldownBtn.style.backgroundColor = useCases[activeIndex].color;
     }, 500);
     // return;
   } else {
