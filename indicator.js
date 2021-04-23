@@ -13,22 +13,21 @@ let scrolldownBtn = document.querySelector('.scroll-down');
 let activeIndex = 1;
 var sliderInterval;
 
-function initSlider() {
+function initSlider(selectedIndex = 0) {
   console.log('init slider');
-  activeIndex = 1;
+  activeIndex += selectedIndex;
 
   // render first time
   dots.forEach((text) => text.classList.remove('active'));
   useCaseTexts.forEach((text) => text.classList.remove('active'));
   galleries.forEach((gallery) => gallery.classList.remove('active'));
-  dots[0].classList.add('active');
-  useCaseTexts[0].classList.add('active');
-  galleries[0].classList.add('active');
-  scrolldownBtn.style.backgroundColor = useCases[0].color;
+  dots[selectedIndex].classList.add('active');
+  useCaseTexts[selectedIndex].classList.add('active');
+  galleries[selectedIndex].classList.add('active');
+  scrolldownBtn.style.backgroundColor = useCases[selectedIndex].color;
 
   // change active status after every 8s
   sliderInterval = setInterval(() => {
-    console.log('activeIndex', activeIndex);
     dots.forEach((text) => text.classList.remove('active'));
     useCaseTexts.forEach((text) => text.classList.remove('active'));
     galleries.forEach((gallery) => gallery.classList.remove('active'));
@@ -70,5 +69,5 @@ function handleActiveSlide(selectedIndex) {
   clearInterval(sliderInterval);
 
   // re-initialize slider
-  initSlider();
+  initSlider(selectedIndex);
 }
