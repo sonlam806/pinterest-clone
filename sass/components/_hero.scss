@@ -103,10 +103,10 @@
     display: flex;
     width: 1750px;
     position: absolute;
-    top: 200px;
+    top: 120px;
     margin-left: auto;
     margin-right: auto;
-    left: auto;
+    left: au∫to;
     right: auto;
 
     .image-column {
@@ -116,46 +116,46 @@
       margin: 0px 10px;
       opacity: 0;
 
-      &[role='first-col'] {
+      &[role="first-col"] {
         margin-top: 0px;
       }
-      &[role='second-col'],
-      &[role='sixth-col'] {
+      &[role="second-col"],
+      &[role="sixth-col"] {
         margin-top: 120px;
       }
-      &[role='third-col'],
-      &[role='fifth-col'] {
+      &[role="third-col"],
+      &[role="fifth-col"] {
         margin-top: 180px;
       }
-      &[role='fourth-col'] {
+      &[role="fourth-col"] {
         margin-top: 240px;
       }
 
       // Animation
-      &[role='first-col'] {
+      &[role="first-col"] {
         animation: slideUp 7s;
       }
-      &[role='second-col'] {
+      &[role="second-col"] {
         animation: slideUp 7s;
         animation-delay: 0.2s;
       }
-      &[role='third-col'] {
+      &[role="third-col"] {
         animation: slideUp 7s;
         animation-delay: 0.5s;
       }
-      &[role='fourth-col'] {
+      &[role="fourth-col"] {
         animation: slideUp 7s;
         animation-delay: 1s;
       }
-      &[role='fifth-col'] {
+      &[role="fifth-col"] {
         animation: slideUp 7s;
         animation-delay: 1.4s;
       }
-      &[role='sixth-col'] {
+      &[role="sixth-col"] {
         animation: slideUp 7s;
         animation-delay: 1.8s;
       }
-      &[role='seventh-col'] {
+      &[role="seventh-col"] {
         animation: slideUp 7s;
         animation-delay: 2.2s;
       }
@@ -167,7 +167,7 @@
             height: 350px;
             border-radius: 6%;
             .image {
-              background-image: url('https://i.pinimg.com/550x/a7/87/20/a78720c39a39ac50a2856420d636d113.jpg');
+              background-image: url("https://i.pinimg.com/550x/a7/87/20/a78720c39a39ac50a2856420d636d113.jpg");
               background-size: cover;
               background-position: 50%;
               background-repeat: no-repeat;
