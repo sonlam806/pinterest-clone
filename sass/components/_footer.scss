@@ -6,6 +6,10 @@
   height: 40px;
   padding-top: 6px;
   background-color: #ffffff;
+  display: none;
+  &.active {
+    display: block;
+  }
 
   .footer-links {
     display: flex;

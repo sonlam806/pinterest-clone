@@ -42,10 +42,18 @@
   // Variants color
   &[role='blue-bg'] {
     background-color: #1877f2;
+    &:hover {
+      opacity: 0.8;
+      background-color: #1877f2;
+    }
   }
   &[role='no-bg'] {
     background-color: transparent;
     color: #000000;
     border: 1px solid #dddddd;
+    &:hover {
+      opacity: 0.9;
+      background-color: #ddd;
+    }
   }
 }
