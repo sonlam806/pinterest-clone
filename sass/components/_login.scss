@@ -26,116 +26,115 @@
       font-weight: 600;
     }
   }
+}
 
-  .login-form {
-    max-width: 395px;
-    min-height: 400px;
-    padding: 20px 10px 24px;
-    border-radius: 32px;
-    background-color: #ffffff;
-    text-align: center;
+.login-form {
+  max-width: 395px;
+  min-height: 400px;
+  padding: 20px 10px 24px;
+  border-radius: 32px;
+  background-color: #ffffff;
+  text-align: center;
 
-    position: relative;
+  position: relative;
 
-    .login-logo {
-      margin-bottom: 8px;
+  .login-logo {
+    margin-bottom: 8px;
+  }
+
+  .login-header {
+    margin-bottom: 1rem;
+    h4 {
+      color: rgb(51, 51, 51);
+      font-size: 36px;
+      font-weight: 600;
+      -webkit-font-smoothing: antialiased;
+      letter-spacing: -1.2px;
+      word-break: break-word;
+      line-height: 1;
     }
-
-    .login-header {
-      margin-bottom: 1rem;
-      h4 {
-        color: rgb(51, 51, 51);
-        font-size: 36px;
-        font-weight: 600;
-        -webkit-font-smoothing: antialiased;
-        letter-spacing: -1.2px;
-        word-break: break-word;
-        line-height: 1;
-      }
-      span {
-        font-size: 1rem;
-        color: rgb(51, 51, 51);
-        font-size: 16px;
-        font-weight: normal;
-      }
+    span {
+      font-size: 1rem;
+      color: rgb(51, 51, 51);
+      font-size: 16px;
+      font-weight: normal;
     }
+  }
 
-    .login-body {
-      input {
-        outline: none;
-        border: 1px solid #dddddd;
-        min-height: 48px;
-        border-radius: 16px;
+  .login-body {
+    input {
+      outline: none;
+      border: 1px solid #dddddd;
+      min-height: 48px;
+      border-radius: 16px;
 
-        width: 60%;
-        margin: 4px 0px;
-        padding: 8px 6px 8px 12px;
+      width: 60%;
+      margin: 4px 0px;
+      padding: 8px 6px 8px 12px;
 
-        transition: all 200ms ease-in-out;
-        &:focus {
-          border: 1px solid dodgerblue;
-        }
-      }
-    }
-
-    .login-actions {
-      .button-group {
-        width: 60%;
-        margin: 0px auto;
-
-        .btn {
-          margin: 4px 0px;
-        }
-      }
-    }
-
-    .terms-of-service {
-      span {
-        display: inline-block;
-        width: 255px;
-        font-size: 11px;
-        color: rgb(118, 118, 118);
-        a {
-          color: #000000;
-          font-weight: bold;
-          cursor: pointer;
-        }
-      }
-    }
-
-    .already-member {
-      margin-bottom: 3rem;
-      button {
-        font-weight: bold;
-        background-color: transparent;
-        outline: none;
-        border: none;
-        cursor: pointer;
-      }
-    }
-
-    .login-form-footer {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-
-      height: 62px;
-      width: 100%;
-      border-radius: 0px 0px 32px 32px;
-      overflow: hidden;
-
-      button {
-        width: 100%;
-        height: 100%;
-        cursor: pointer;
-        background-color: #efefef;
-        font-weight: bold;
+      transition: all 200ms ease-in-out;
+      &:focus {
+        border: 1px solid dodgerblue;
       }
     }
   }
-}
 
+  .login-actions {
+    .button-group {
+      width: 60%;
+      margin: 0px auto;
+
+      .btn {
+        margin: 4px 0px;
+      }
+    }
+  }
+
+  .terms-of-service {
+    span {
+      display: inline-block;
+      width: 255px;
+      font-size: 11px;
+      color: rgb(118, 118, 118);
+      a {
+        color: #000000;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .already-member {
+    margin-bottom: 3rem;
+    button {
+      font-weight: bold;
+      background-color: transparent;
+      outline: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  .login-form-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    height: 62px;
+    width: 100%;
+    border-radius: 0px 0px 32px 32px;
+    overflow: hidden;
+
+    button {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      background-color: #efefef;
+      font-weight: bold;
+    }
+  }
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;

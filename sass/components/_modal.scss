@@ -1,17 +1,20 @@
 .sign-up-modal {
   width: 50vw;
   margin: 0 auto;
-
-  border: 1px solid red;
+  position: relative;
+  z-index: 1000;
 
   &.hide {
     display: none;
+    .login-form {
+      display: none;
+    }
   }
   &.show {
     display: block;
 
     .overlay {
-      position: fixed;
+      position: absolute;
       width: 100vw;
       height: 100vh;
       top: 0;
@@ -20,5 +23,16 @@
 
       z-index: -1;
     }
+
+    .login-form {
+      display: block;
+    }
+  }
+
+  .login-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
