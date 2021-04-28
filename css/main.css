@@ -604,6 +604,9 @@ body {
       max-width: 80%;
       font-size: 70px;
       font-weight: 600; }
+  @media screen and (max-width: 1366px) {
+    .login {
+      padding-top: 0px; } }
 
 .login-form {
   max-width: 395px;
