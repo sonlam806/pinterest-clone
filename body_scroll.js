@@ -1,20 +1,31 @@
 const body = document.body;
-const login = document.getElementById('login');
-const overlay = document.querySelector('.overlay');
-const scrollDownBtn = document.getElementById('scrollDownBtn');
-const arrowIcon = document.querySelector('.arrow-icon');
-const footer = document.querySelector('.footer');
+const login = document.getElementById("login");
+const overlay = document.querySelector(".overlay");
+const scrollDownBtn = document.getElementById("scrollDownBtn");
+const arrowIcon = document.querySelector(".arrow-icon");
+const footer = document.querySelector(".footer");
 
-body.addEventListener('wheel', function (event) {
+body.addEventListener(
+  "wheel",
+  function (event) {
+    return scroll(event);
+  },
+  false
+);
+
+function scroll(event) {
+  console.log("event", event);
   // scroll down
   if (event.deltaY > 0) {
+    console.log("scrolling down");
     scrollDown();
     return;
   } else {
+    console.log("scrolling up");
     scrollUp();
     return;
   }
-});
+}
 
 function scrollDown() {
   // detect when user scroll to bottom of the page, prevent action
@@ -26,19 +37,19 @@ function scrollDown() {
     window.scroll({
       top: 862,
       left: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
 
-    overlay.style.display = 'none';
-    footer.classList.add('active');
+    overlay.style.display = "none";
+    footer.classList.add("active");
     // render current activeIndex
-    dots.forEach((text) => text.classList.remove('active'));
-    useCaseTexts.forEach((text) => text.classList.remove('active'));
-    galleries.forEach((gallery) => gallery.classList.remove('active'));
+    dots.forEach((text) => text.classList.remove("active"));
+    useCaseTexts.forEach((text) => text.classList.remove("active"));
+    galleries.forEach((gallery) => gallery.classList.remove("active"));
 
-    galleries[activeIndex].classList.add('active');
-    galleries[activeIndex].style.animation = 'none';
-    galleries[activeIndex].style.opacity = '1';
+    galleries[activeIndex].classList.add("active");
+    galleries[activeIndex].style.animation = "none";
+    galleries[activeIndex].style.opacity = "1";
     // change the opacity for each column in active gallery
     const childrens = Array.from(galleries[activeIndex].children);
     childrens.forEach((child) => {
@@ -47,13 +58,13 @@ function scrollDown() {
     });
 
     // scroll down button style
-    arrowIcon.classList.add('up');
+    arrowIcon.classList.add("up");
     scrolldownBtn.style.backgroundColor = useCases[activeIndex].color;
-    scrollDownBtn.style.top = '10%';
+    scrollDownBtn.style.top = "10%";
   }, 500);
 
   setTimeout(() => {
-    login.classList.add('active');
+    login.classList.add("active");
   }, 700);
 }
 
@@ -64,14 +75,15 @@ function scrollUp() {
     window.scroll({
       top: 0,
       left: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
-    login.classList.remove('active');
+    login.classList.remove("active");
 
-    scrollDownBtn.style.top = '90%';
-    arrowIcon.classList.remove('up');
-    footer.classList.remove('active');
+    scrollDownBtn.style.top = "90%";
+    arrowIcon.classList.remove("up");
+    footer.classList.remove("active");
 
     initSlider();
   }, 500);
 }
+
