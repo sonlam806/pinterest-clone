@@ -743,23 +743,36 @@ body {
         display: inline-block; }
       .sign-up-modal.show .login-form .login-logo .toolbar .close-button {
         display: block;
+        width: 50px;
+        height: 30px;
         float: right;
         position: relative;
         cursor: pointer;
         text-align: center; }
-        .sign-up-modal.show .login-form .login-logo .toolbar .close-button::after {
+        .sign-up-modal.show .login-form .login-logo .toolbar .close-button:after {
+          content: "";
           position: absolute;
-          top: 0;
-          left: 0;
-          width: 20px;
-          height: 20px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 36px;
+          height: 36px;
           border-radius: 50%;
-          background-color: dodgerblue;
-          z-index: 3000; }
+          background-color: #eee;
+          z-index: 1600;
+          opacity: 0;
+          transition: opacity 300ms ease-in-out; }
+        .sign-up-modal.show .login-form .login-logo .toolbar .close-button:hover:after {
+          opacity: 1; }
         .sign-up-modal.show .login-form .login-logo .toolbar .close-button svg {
           width: 18px;
           height: 18px;
-          margin-right: 10px; }
+          margin-right: 10px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1800; }
   .sign-up-modal .login-form {
     position: fixed;
     top: 50%;
