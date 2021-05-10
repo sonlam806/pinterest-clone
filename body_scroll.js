@@ -5,27 +5,17 @@ const scrollDownBtn = document.getElementById("scrollDownBtn");
 const arrowIcon = document.querySelector(".arrow-icon");
 const footer = document.querySelector(".footer");
 
-body.addEventListener(
-  "wheel",
-  function (event) {
-    return scroll(event);
-  },
-  false
-);
-
-function scroll(event) {
-  console.log("event", event);
+const scroll = function (event) {
   // scroll down
   if (event.deltaY > 0) {
     console.log("scrolling down");
     scrollDown();
     return;
   } else {
-    console.log("scrolling up");
     scrollUp();
     return;
   }
-}
+};
 
 function scrollDown() {
   // detect when user scroll to bottom of the page, prevent action
@@ -86,4 +76,6 @@ function scrollUp() {
     initSlider();
   }, 500);
 }
+
+body.addEventListener("wheel", scroll, false);
 
