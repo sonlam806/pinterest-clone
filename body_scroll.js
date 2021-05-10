@@ -8,7 +8,6 @@ const footer = document.querySelector(".footer");
 const scroll = function (event) {
   // scroll down
   if (event.deltaY > 0) {
-    console.log("scrolling down");
     scrollDown();
     return;
   } else {
