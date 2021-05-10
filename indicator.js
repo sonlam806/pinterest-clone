@@ -56,7 +56,6 @@ for (let index = 0; index < dots.length; index++) {
 }
 
 function handleActiveSlide(selectedIndex) {
-  console.log(selectedIndex);
   activeIndex = selectedIndex;
   useCaseTexts.forEach((text) => text.classList.remove("active"));
   dots.forEach((text) => text.classList.remove("active"));
