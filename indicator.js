@@ -18,7 +18,10 @@ function initSlider(selectedIndex) {
   if (selectedIndex) {
     activeIndex = selectedIndex;
   }
-
+  if (!selectedIndex) {
+    activeIndex = 0;
+  }
+  console.log(activeIndex);
   // render first time
   dots.forEach((text) => text.classList.remove("active"));
   useCaseTexts.forEach((text) => text.classList.remove("active"));
