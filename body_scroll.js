@@ -32,19 +32,13 @@ function scrollDown() {
     overlay.style.display = "none";
     footer.classList.add("active");
     // render current activeIndex
-    dots.forEach((text) => text.classList.remove("active"));
-    useCaseTexts.forEach((text) => text.classList.remove("active"));
-    galleries.forEach((gallery) => gallery.classList.remove("active"));
+    // dots.forEach((text) => text.classList.remove("active"));
+    // useCaseTexts.forEach((text) => text.classList.remove("active"));
+    // galleries.forEach((gallery) => gallery.classList.remove("active"));
 
-    galleries[activeIndex].classList.add("active");
-    galleries[activeIndex].style.animation = "none";
-    galleries[activeIndex].style.opacity = "1";
-    // change the opacity for each column in active gallery
-    const childrens = Array.from(galleries[activeIndex].children);
-    childrens.forEach((child) => {
-      // child.style.opacity = 1;
-      // child.style.animation = 'none';
-    });
+    // galleries[activeIndex].classList.add("active");
+    // galleries[activeIndex].style.animation = "none";
+    // galleries[activeIndex].style.opacity = "1";
 
     // scroll down button style
     arrowIcon.classList.add("up");
@@ -69,6 +63,7 @@ function scrollUp() {
     login.classList.remove("active");
 
     scrollDownBtn.style.top = "90%";
+    overlay.style.display = "block";
     arrowIcon.classList.remove("up");
     footer.classList.remove("active");
 

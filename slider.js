@@ -14,14 +14,12 @@ let activeIndex = 0;
 var sliderInterval;
 
 function initSlider(selectedIndex) {
-  console.log("init slider");
   if (selectedIndex) {
     activeIndex = selectedIndex;
   }
   if (!selectedIndex) {
     activeIndex = 0;
   }
-  console.log(activeIndex);
   // render first time
   dots.forEach((text) => text.classList.remove("active"));
   useCaseTexts.forEach((text) => text.classList.remove("active"));
@@ -37,14 +35,15 @@ function initSlider(selectedIndex) {
     useCaseTexts.forEach((text) => text.classList.remove("active"));
     galleries.forEach((gallery) => gallery.classList.remove("active"));
 
-    if (activeIndex > 3) {
-      activeIndex = 0;
+    console.log("activeIndex", activeIndex);
+    if (activeIndex > 2) {
+      activeIndex = -1;
     }
 
-    dots[activeIndex].classList.add("active");
-    useCaseTexts[activeIndex].classList.add("active");
-    galleries[activeIndex].classList.add("active");
-    scrolldownBtn.style.backgroundColor = useCases[activeIndex].color;
+    dots[activeIndex + 1].classList.add("active");
+    useCaseTexts[activeIndex + 1].classList.add("active");
+    galleries[activeIndex + 1].classList.add("active");
+    scrolldownBtn.style.backgroundColor = useCases[activeIndex + 1].color;
     activeIndex++;
   }, 8000);
 }
@@ -66,7 +65,7 @@ function handleActiveSlide(selectedIndex) {
 
   setTimeout(() => {
     useCaseTexts[selectedIndex].classList.add("active");
-  }, 300);
+  }, 100);
   dots[selectedIndex].classList.add("active");
   galleries[selectedIndex].classList.add("active");
 
