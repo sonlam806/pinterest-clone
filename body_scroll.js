@@ -21,7 +21,8 @@ function scrollDown() {
   if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
     return;
   }
-  clearInterval(sliderInterval);
+  // clearInterval(sliderInterval);
+  overlay.style.display = "none";
   setTimeout(() => {
     window.scroll({
       top: 862,
@@ -29,30 +30,21 @@ function scrollDown() {
       behavior: "smooth",
     });
 
-    overlay.style.display = "none";
     footer.classList.add("active");
-    // render current activeIndex
-    // dots.forEach((text) => text.classList.remove("active"));
-    // useCaseTexts.forEach((text) => text.classList.remove("active"));
-    // galleries.forEach((gallery) => gallery.classList.remove("active"));
-
-    // galleries[activeIndex].classList.add("active");
-    // galleries[activeIndex].style.animation = "none";
-    // galleries[activeIndex].style.opacity = "1";
-
     // scroll down button style
     arrowIcon.classList.add("up");
     scrolldownBtn.style.backgroundColor = useCases[activeIndex].color;
     scrollDownBtn.style.top = "10%";
-  }, 500);
+  }, 800);
 
   setTimeout(() => {
     login.classList.add("active");
-  }, 700);
+  }, 900);
 }
 
 function scrollUp() {
   if (window.scrollY === 0) return;
+  footer.classList.remove("active");
 
   setTimeout(() => {
     window.scroll({
@@ -65,10 +57,9 @@ function scrollUp() {
     scrollDownBtn.style.top = "90%";
     overlay.style.display = "block";
     arrowIcon.classList.remove("up");
-    footer.classList.remove("active");
 
-    initSlider();
-  }, 500);
+    // initSlider();
+  }, 800);
 }
 
 body.addEventListener("wheel", scroll, false);
