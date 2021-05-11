@@ -35,7 +35,6 @@ function initSlider(selectedIndex) {
     useCaseTexts.forEach((text) => text.classList.remove("active"));
     galleries.forEach((gallery) => gallery.classList.remove("active"));
 
-    console.log("activeIndex", activeIndex);
     if (activeIndex > 2) {
       activeIndex = -1;
     }
