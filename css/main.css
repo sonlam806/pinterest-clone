@@ -713,7 +713,7 @@ body {
       .footer .footer-links .footer-link:hover {
         color: #1877f2; }
 
-.sign-up-modal {
+.sign-up-modal, .log-in-modal {
   width: 100vw;
   height: 100vh;
   margin: 0 auto;
@@ -721,13 +721,13 @@ body {
   top: 0;
   left: 0;
   z-index: 1500; }
-  .sign-up-modal.hide {
+  .sign-up-modal.hide, .log-in-modal.hide {
     display: none; }
-    .sign-up-modal.hide .login-form {
+    .sign-up-modal.hide .login-form, .log-in-modal.hide .login-form {
       display: none; }
-  .sign-up-modal.show {
+  .sign-up-modal.show, .log-in-modal.show {
     display: block; }
-    .sign-up-modal.show .overlay {
+    .sign-up-modal.show .overlay, .log-in-modal.show .overlay {
       width: 100vw;
       height: 100vh;
       position: absolute;
@@ -735,13 +735,13 @@ body {
       left: 0;
       background-color: rgba(0, 0, 0, 0.4);
       z-index: 1600; }
-    .sign-up-modal.show .login-form {
+    .sign-up-modal.show .login-form, .log-in-modal.show .login-form {
       display: block;
       width: 50%;
       height: 90%; }
-      .sign-up-modal.show .login-form .login-logo .toolbar img {
+      .sign-up-modal.show .login-form .login-logo .toolbar img, .log-in-modal.show .login-form .login-logo .toolbar img {
         display: inline-block; }
-      .sign-up-modal.show .login-form .login-logo .toolbar .close-button {
+      .sign-up-modal.show .login-form .login-logo .toolbar .close-button, .log-in-modal.show .login-form .login-logo .toolbar .close-button {
         display: block;
         width: 50px;
         height: 30px;
@@ -749,7 +749,7 @@ body {
         position: relative;
         cursor: pointer;
         text-align: center; }
-        .sign-up-modal.show .login-form .login-logo .toolbar .close-button:after {
+        .sign-up-modal.show .login-form .login-logo .toolbar .close-button:after, .log-in-modal.show .login-form .login-logo .toolbar .close-button:after {
           content: "";
           position: absolute;
           top: 50%;
@@ -762,9 +762,9 @@ body {
           z-index: 1600;
           opacity: 0;
           transition: opacity 300ms ease-in-out; }
-        .sign-up-modal.show .login-form .login-logo .toolbar .close-button:hover:after {
+        .sign-up-modal.show .login-form .login-logo .toolbar .close-button:hover:after, .log-in-modal.show .login-form .login-logo .toolbar .close-button:hover:after {
           opacity: 1; }
-        .sign-up-modal.show .login-form .login-logo .toolbar .close-button svg {
+        .sign-up-modal.show .login-form .login-logo .toolbar .close-button svg, .log-in-modal.show .login-form .login-logo .toolbar .close-button svg {
           width: 18px;
           height: 18px;
           margin-right: 10px;
@@ -773,9 +773,43 @@ body {
           left: 50%;
           transform: translate(-50%, -50%);
           z-index: 1800; }
-  .sign-up-modal .login-form {
+  .sign-up-modal .login-form, .log-in-modal .login-form {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2000; }
+
+.log-in-modal.show .login-form {
+  height: 65%; }
+  .log-in-modal.show .login-form .forgot-password {
+    text-align: left;
+    padding-left: 5rem;
+    margin-bottom: 1rem; }
+    .log-in-modal.show .login-form .forgot-password a {
+      font-weight: bold;
+      font-size: 14px;
+      color: #000000; }
+  .log-in-modal.show .login-form .not-a-member {
+    margin-top: 0.7rem;
+    position: relative; }
+    .log-in-modal.show .login-form .not-a-member:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      width: 50%;
+      height: 1px;
+      background-color: #dedede; }
+    .log-in-modal.show .login-form .not-a-member button {
+      margin-top: 0.7rem;
+      font-size: 12px;
+      font-weight: bold;
+      background-color: transparent;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      transition: all 300ms ease-in-out; }
+      .log-in-modal.show .login-form .not-a-member button:hover {
+        color: dodgerblue; }

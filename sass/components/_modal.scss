@@ -1,4 +1,4 @@
-.sign-up-modal {
+.sign-up-modal, .log-in-modal {
   width: 100vw;
   height: 100vh;
   margin: 0 auto;
@@ -94,5 +94,49 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2000;
+  }
+}
+
+.log-in-modal.show {
+.login-form {
+  height: 65%;
+  .forgot-password {
+    text-align: left;
+    padding-left: 5rem;
+    margin-bottom: 1rem;
+    a {
+      font-weight: bold;
+      font-size: 14px;
+      color: #000000;
+    }
+   }
+   .not-a-member {
+     margin-top: 0.7rem;
+     position: relative;
+
+     &:before {
+       content: "";
+       position: absolute;
+       top: 0;
+       left: 50%;
+       transform: translate(-50%, 0%);
+       width: 50%;
+       height: 1px;
+       background-color: #dedede;
+     }
+     button {
+       margin-top: 0.7rem;
+      font-size: 12px;
+      font-weight: bold;
+      background-color: transparent;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      transition: all 300ms ease-in-out;
+      &:hover {
+        color: dodgerblue;
+      }
+     }
+   }
   }
 }
