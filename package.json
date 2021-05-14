@@ -7,7 +7,7 @@
     "dev": "concurrently --kill-others \"yarn watch-sass \" \"yarn live-server\"",
     "sass-compile": "node-sass -rw sass -o css",
     "watch-sass": "node-sass -w sass/ -o css",
-    "live-server": "browser-sync start ----server --files 'css/*.css'"
+    "live-server": "browser-sync start --server --files 'css/*.css'"
   },
   "devDependencies": {
     "concurrently": "^6.1.0",

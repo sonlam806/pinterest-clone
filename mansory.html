@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/main.css" media="all" />
   </head>
+
   <body style="overflow-y: scroll">
     <div class="container-fluid">
       <div class="navbar">
@@ -49,41 +50,97 @@
           </div>
         </nav>
       </div>
+      <!-- mansory section -->
       <div class="masonry-wrapper">
         <div class="masonry">
           <div class="masonry-item">
-            <img
-              src="https://picsum.photos/450/600?image=100"
-              alt="Dummy Image"
-              class="mansory-img"
-            />
-            <div class="mansory-content">
-              <div class="content-header">
-                <div class="board">
-                  <div class="selected-board">
-                    <span>Home design</span>
-                    <span>arrow</span>
+            <div class="pin-wrapper">
+              <img
+                src="https://picsum.photos/450/600?image=100"
+                alt="Dummy Image"
+                class="mansory-img"
+              />
+              <div class="mansory-content">
+                <div class="content-header">
+                  <div class="board">
+                    <div class="selected-board">
+                      <span>Home design</span>
+                      <span>
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                      </span>
+                    </div>
                   </div>
+                  <button class="btn btn-primary">Save</button>
                 </div>
-                <button class="btn btn-primary">Save</button>
-              </div>
-              <div class="content-footer">
-                <div class="link">
-                  <div class="icon"></div>
-                  <span class="website-name">etsy.com</span>
-                </div>
-                <div class=share-actions">
-                  <div class="share"></div>
-                  <div class="actions">
-                    <span>...</span>
-                    <div class="actions-popup">
-                      <div class="popup-header">
-                        This Pin was inspired by your recent activity
+                <div class="content-footer">
+                  <div class="link">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.5253 5.49475L10.5206 7.49475L15.0782 7.50541L5.47473 17.0896L6.88752 18.5052L16.5173 8.89479L16.5065 13.5088L18.5065 13.5134L18.5253 5.51345L10.5253 5.49475Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <span class="website-name">etsy.com</span>
+                  </div>
+                  <div class="share-actions">
+                    <div class="share">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M11 14.9861C11 15.5384 11.4477 15.9861 12 15.9861C12.5523 15.9861 13 15.5384 13 14.9861V7.82831L16.2428 11.0711L17.657 9.65685L12.0001 4L6.34326 9.65685L7.75748 11.0711L11 7.82854V14.9861Z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M4 14H6V18H18V14H20V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V14Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </div>
+                    <div class="actions">
+                      <svg
+                        class="dots"
+                        height="16"
+                        width="16"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        aria-label=""
+                        role="img"
+                      >
+                        <path
+                          d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"
+                        ></path>
+                      </svg>
+                      <div class="actions-popup hide">
+                        <div class="popup-header">
+                          This Pin was inspired by your recent activity
+                        </div>
+                        <div class="divider"></div>
+                        <div class="action">Hide pin</div>
+                        <div class="action">Download image</div>
+                        <div class="action">Report pin</div>
                       </div>
-                      <div class="divider"></div>
-                      <div class="action">Hide pin</div>
-                      <div class="action">Download image</div>
-                      <div class="action">Report pin</div>
                     </div>
                   </div>
                 </div>
@@ -301,13 +358,4 @@
     </div>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
 
