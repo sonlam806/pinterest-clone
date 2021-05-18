@@ -57,3 +57,17 @@
     }
   }
 }
+
+.nav-btn {
+  border: none;
+  outline: none;
+  background-color:  transparent;
+  color: #000000;
+  
+  margin: 0px 8px;
+
+  cursor: pointer;
+  svg {
+    fill: #767676; 
+  }
+}

@@ -30,6 +30,15 @@ body {
   font-size: 1rem;
   line-height: 1.7; }
 
+.d-flex {
+  display: flex; }
+
+.justify-center {
+  justify-content: center; }
+
+.align-center {
+  align-items: center; }
+
 .container {
   max-width: 768px;
   margin: 0 auto; }
@@ -371,6 +380,16 @@ body {
     .btn[role='no-bg']:hover {
       opacity: 0.9;
       background-color: #ddd; }
+
+.nav-btn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #000000;
+  margin: 0px 8px;
+  cursor: pointer; }
+  .nav-btn svg {
+    fill: #767676; }
 
 .hero-section {
   width: 100%;
@@ -817,6 +836,51 @@ body {
       .log-in-modal.show .login-form .not-a-member button:hover {
         color: dodgerblue; }
 
+/*  Logged in Navbar    */
+.logged-in-navbar {
+  justify-content: start !important; }
+  .logged-in-navbar .navbar-brand {
+    margin-right: 1rem; }
+    .logged-in-navbar .navbar-brand svg {
+      margin-right: 0.5rem; }
+  .logged-in-navbar .search-box {
+    flex: 1 1 auto;
+    margin-right: 1rem;
+    border-radius: 26px;
+    background-color: #efefef; }
+    .logged-in-navbar .search-box input {
+      width: 100%;
+      padding: 8px 16px;
+      color: #333333;
+      font-size: 1rem;
+      border: none;
+      outline: none;
+      background-color: transparent; }
+  .logged-in-navbar .button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .logged-in-navbar .button-container > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px 4px;
+      position: relative; }
+      .logged-in-navbar .button-container > div::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+        background-color: #efefef;
+        z-index: -1;
+        opacity: 0; }
+      .logged-in-navbar .button-container > div:hover::after {
+        opacity: 1; }
+
 .masonry-wrapper {
   padding: 1.5em;
   width: 96vw;
@@ -924,6 +988,10 @@ body {
     columns: 5; } }
 
 @media only screen and (min-width: 1366px) {
+  .masonry {
+    columns: 5; } }
+
+@media only screen and (min-width: 1800px) {
   .masonry {
     columns: 7; } }
 
