@@ -866,14 +866,18 @@ body {
       align-items: center;
       margin: 0px 4px;
       position: relative; }
+      .logged-in-navbar .button-container > div.large-overlay::after {
+        height: 48px;
+        width: 48px; }
+      .logged-in-navbar .button-container > div.small-overlay::after {
+        width: 30px;
+        height: 30px; }
       .logged-in-navbar .button-container > div::after {
         content: '';
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        height: 48px;
-        width: 48px;
         border-radius: 50%;
         background-color: #efefef;
         z-index: -1;

@@ -3,6 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pinterest Clone - Education Purpose</title>
+    <link
+      rel="shortcut icon"
+      href="public/images/icon/favicon-54a5b2af.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="css/main.css" media="all" />
   </head>
 
@@ -52,16 +58,22 @@
                   />
                 </svg>
               </div>
-              <div class="d-flex align-center">
-                <input type="text" placeholder="Search" id="searchInput" />
+              <div class="d-flex align-center" style="flex: 1 1 auto">
+                <input
+                  type="text"
+                  placeholder="Search"
+                  id="searchInput"
+                  onfocus="searchFocus()"
+                  onblur="searchBlur()"
+                />
               </div>
             </div>
           </div>
         </div>
 
         <div class="button-container">
-          <div class="notification">
-            <button class="nav-btn large-overlay">
+          <div class="notification large-overlay">
+            <button class="nav-btn">
               <svg
                 class="icon-bell"
                 height="24"
@@ -77,8 +89,8 @@
               </svg>
             </button>
           </div>
-          <div class="messages">
-            <button class="nav-btn large-overlay">
+          <div class="messages large-overlay">
+            <button class="nav-btn">
               <svg
                 class="icon-messages"
                 height="24"
@@ -91,13 +103,13 @@
               </svg>
             </button>
           </div>
-          <div class="header-profile">
-            <a href="#" class="nav-btn large-overlay">T</a>
+          <div class="header-profile large-overlay">
+            <a href="#" class="nav-btn">T</a>
           </div>
 
           <!-- account options -->
-          <div class="account-options">
-            <button class="nav-btn small-overlay">
+          <div class="account-options small-overlay">
+            <button class="nav-btn">
               <div>
                 <svg
                   width="24"
@@ -423,5 +435,7 @@
       </div>
     </div>
   </body>
+
+  <script src="./search-handler.js"></script>
 </html>
 
