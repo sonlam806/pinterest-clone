@@ -738,41 +738,44 @@ body {
     .sign-up-modal.show .login-form, .log-in-modal.show .login-form {
       display: block;
       width: 50%;
-      height: 90%; }
-      .sign-up-modal.show .login-form .login-logo .toolbar img, .log-in-modal.show .login-form .login-logo .toolbar img {
-        display: inline-block; }
-      .sign-up-modal.show .login-form .login-logo .toolbar .close-button, .log-in-modal.show .login-form .login-logo .toolbar .close-button {
-        display: block;
-        width: 50px;
-        height: 30px;
-        float: right;
-        position: relative;
-        cursor: pointer;
-        text-align: center; }
-        .sign-up-modal.show .login-form .login-logo .toolbar .close-button:after, .log-in-modal.show .login-form .login-logo .toolbar .close-button:after {
-          content: "";
+      height: 80%; }
+      .sign-up-modal.show .login-form .login-logo .toolbar, .log-in-modal.show .login-form .login-logo .toolbar {
+        position: relative; }
+        .sign-up-modal.show .login-form .login-logo .toolbar p, .log-in-modal.show .login-form .login-logo .toolbar p {
+          align-items: center; }
+        .sign-up-modal.show .login-form .login-logo .toolbar .close-button, .log-in-modal.show .login-form .login-logo .toolbar .close-button {
           position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 36px;
-          height: 36px;
-          border-radius: 50%;
-          background-color: #eee;
-          z-index: 1600;
-          opacity: 0;
-          transition: opacity 300ms ease-in-out; }
-        .sign-up-modal.show .login-form .login-logo .toolbar .close-button:hover:after, .log-in-modal.show .login-form .login-logo .toolbar .close-button:hover:after {
-          opacity: 1; }
-        .sign-up-modal.show .login-form .login-logo .toolbar .close-button svg, .log-in-modal.show .login-form .login-logo .toolbar .close-button svg {
-          width: 18px;
-          height: 18px;
-          margin-right: 10px;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          z-index: 1800; }
+          top: 0;
+          right: 0;
+          display: block;
+          width: 50px;
+          height: 30px;
+          cursor: pointer;
+          text-align: center; }
+          .sign-up-modal.show .login-form .login-logo .toolbar .close-button:after, .log-in-modal.show .login-form .login-logo .toolbar .close-button:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #eee;
+            z-index: 1600;
+            opacity: 0;
+            transition: opacity 300ms ease-in-out; }
+          .sign-up-modal.show .login-form .login-logo .toolbar .close-button:hover:after, .log-in-modal.show .login-form .login-logo .toolbar .close-button:hover:after {
+            opacity: 1; }
+          .sign-up-modal.show .login-form .login-logo .toolbar .close-button svg, .log-in-modal.show .login-form .login-logo .toolbar .close-button svg {
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1800; }
   .sign-up-modal .login-form, .log-in-modal .login-form {
     position: fixed;
     top: 50%;
@@ -781,7 +784,7 @@ body {
     z-index: 2000; }
 
 .log-in-modal.show .login-form {
-  height: 65%; }
+  height: 70%; }
   .log-in-modal.show .login-form .forgot-password {
     text-align: left;
     padding-left: 5rem;

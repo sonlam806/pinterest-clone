@@ -33,20 +33,21 @@
     .login-form {
       display: block;
       width: 50%;
-      height: 90%;
+      height: 80%;
       .login-logo {
       .toolbar {
-        img {
-        display: inline-block;
+        position: relative;
+        p {
+          align-items: center;
         }
         .close-button {
+            position: absolute;
+            top: 0;
+            right: 0;
           display:  block;
           width: 50px;
           height: 30px;
-          float: right;
 
-
-          position: relative;
           cursor: pointer;
           text-align: center;
                           
@@ -99,7 +100,7 @@
 
 .log-in-modal.show {
 .login-form {
-  height: 65%;
+  height: 70%;
   .forgot-password {
     text-align: left;
     padding-left: 5rem;
